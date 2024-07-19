@@ -26,18 +26,18 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <div className="container box-border h-screen max-h-[800px] mx-auto px-12 py-12 flex flex-col md:flex-row gap-8 items-center max-w-[1280px] ">
+    <div className="container mx-auto box-border flex max-w-[1280px] flex-col p-6 md:h-screen md:flex-row md:items-center md:gap-8 md:p-12 lg:max-h-[800px]">
       {/* Left column */}
-      <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8 flex flex-col gap-3">
+      <div className="mb-8 flex flex-col gap-3 md:mb-0 md:w-1/2 md:pr-8">
         <p className="text-[1.5rem] text-gray-500">New</p>
-        <div className="w-[4rem] my-3 bg-gray-500 h-[0.10rem]"></div>
-        <h1 className="text-5xl font-bold mb-4">Why build from Scratch?</h1>
-        <p className="text-lg mb-6">
+        <div className="my-3 h-[0.10rem] w-[4rem] bg-gray-500"></div>
+        <h1 className="mb-4 text-5xl font-bold">Why build from Scratch?</h1>
+        <p className="mb-6 text-lg">
           Streamline your processes with HNG boilerplate built for{" "}
           <span className="text-orange-500">efficiency</span> and{" "}
           <span className="text-orange-500">optimal productivity</span>.
         </p>
-        <p className="text-sm text-gray-600 mb-2">
+        <p className="mb-2 text-sm text-gray-600">
           Enter your Email to get Free Templates
         </p>
         <form onSubmit={handleSubmit(onSubmit)} className="mb-4">
@@ -51,16 +51,16 @@ const HeroSection: React.FC = () => {
                 message: "Invalid email address",
               },
             })}
-            className={`w-full outline-none px-4 py-2 border ${
+            className={`w-full border px-4 py-2 outline-none ${
               errors.email ? "border-red-500" : "border-gray-300"
-            } rounded mb-2`}
+            } mb-2 rounded`}
           />
           {errors.email && (
-            <p className="text-red-500 text-sm mb-2">{errors.email.message}</p>
+            <p className="mb-2 text-sm text-red-500">{errors.email.message}</p>
           )}
           <button
             type="submit"
-            className="w-[250px] px-4 py-4 bg-orange-500 text-white text-xl rounded-lg mt-3 hover:bg-orange-600 transition duration-300"
+            className="mt-3 w-[250px] rounded-lg bg-orange-500 px-4 py-4 text-xl text-white transition duration-300 hover:bg-orange-600"
           >
             Get Your Free Copy
           </button>
@@ -69,7 +69,7 @@ const HeroSection: React.FC = () => {
 
       {/* Right column */}
       <div className="md:w-1/2">
-        <div className="relative w-full aspect-square">
+        <div className="relative aspect-square w-full">
           <Image
             src="/squeezepage/image.png"
             alt="Woman using laptop"
